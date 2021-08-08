@@ -2,7 +2,6 @@ import './App.css';
 import ProductCard from './components/productCard';
 import CheckOut from './components/checkout'
 import LoginPage from './components/loginPage';
-import OrderConfirmation from './components/orderConfirmation';
 import { Router, Switch, Route } from "react-router-dom";
 import {useEffect, useState} from 'react';
 import history from '../src/history';
