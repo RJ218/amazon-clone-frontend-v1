@@ -65,6 +65,7 @@ function LoginPage({ setCurrentUser }) {
             }).then(response => response.json()).then(data => {
                 console.log(data)
                 setCurrentUser({ id: data._id, Email: data.Email })
+                alert('Sign Up Successfull. Click the Sign In Button To Sign In.')
 
             }).catch(err => {
                 console.log(err)

@@ -45,6 +45,10 @@ function App() {
       console.log(arr)
       setPrices(arr)
       setproductsJson(data)
+    }).catch(err => {
+      console.log(err)
+      alert('Login First')
+      history.push('/')
     })
   }, [])
 
@@ -62,7 +66,8 @@ function App() {
             method:'POST',
             mode:'no-cors',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'token': token
             },
             body: JSON.stringify(token)    
         }).then(response => response.json()).then(data =>{
